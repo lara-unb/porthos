@@ -1,0 +1,586 @@
+<robot
+  name="suporte_porthos_description">
+  <link
+    name="suporte_base">
+    <inertial>
+      <origin
+        xyz="0.16 -0.0717771259809899 0.293842379381435"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="0.0517372413967915"
+        ixy="2.32967941812823E-17"
+        ixz="2.27682456221956E-18"
+        iyy="0.0813923285839342"
+        iyz="0.000218090834338814"
+        izz="0.0306997500302406" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="suporte_monitor">
+    <inertial>
+      <origin
+        xyz="0.00735106382978723 -0.0176489361702128 -0.16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0451200000000001" />
+      <inertia
+        ixx="0.000387649159148937"
+        ixy="-1.54468085106384E-06"
+        ixz="3.87275403044827E-21"
+        iyy="0.000387649159148937"
+        iyz="-6.76739338593385E-22"
+        izz="5.25031829787237E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_monitor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_monitor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="monitor_joint"
+    type="fixed">
+    <origin
+      xyz="0.32 -0.103 0.335"
+      rpy="-1.5707963267949 -6.12303176911189E-17 -1.5707963267949" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="suporte_monitor" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="suporte_depth">
+    <inertial>
+      <origin
+        xyz="0.13 0.00149999999999995 0.035"
+        rpy="0 0 0" />
+      <mass
+        value="0.0546000000000001" />
+      <inertia
+        ixx="2.233595E-05"
+        ixy="2.47051276282504E-22"
+        ixz="-8.00805526497683E-34"
+        iyy="0.000329875"
+        iyz="-8.47032947254312E-23"
+        izz="0.00030762095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_depth.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_depth.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="depth_joint"
+    type="fixed">
+    <origin
+      xyz="0.03 -0.043 0.511"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="suporte_depth" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="suporte_kinect">
+    <inertial>
+      <origin
+        xyz="0.16 0.0149999999999999 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.374047006313238" />
+      <inertia
+        ixx="0.000133581294455335"
+        ixy="-1.44622228884143E-20"
+        ixz="-9.19421327041379E-20"
+        iyy="0.0032955828515892"
+        iyz="1.65953110393451E-20"
+        izz="0.00322173401727873" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_kinect.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_kinect.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kinect_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.0429999999999997 0.6"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="suporte_kinect" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="suporte_armControl">
+    <inertial>
+      <origin
+        xyz="0.13 0.015 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.267051450380625" />
+      <inertia
+        ixx="8.86846066165584E-05"
+        ixy="1.7172769498249E-20"
+        ixz="-2.97977476693918E-20"
+        iyy="0.00157152571659327"
+        iyz="1.07423367606254E-20"
+        izz="0.00152593856431166" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_armControl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/suporte_armControl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armControl"
+    type="fixed">
+    <origin
+      xyz="0.03 -0.043 0.145"
+      rpy="1.5708 0 0" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="suporte_armControl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tampa1">
+    <inertial>
+      <origin
+        xyz="0.0149999999999999 -0.0150000000000001 -0.000491941727426247"
+        rpy="0 0 0" />
+      <mass
+        value="0.000874663053495623" />
+      <inertia
+        ixx="6.38808008560932E-08"
+        ixy="-5.78363233423954E-24"
+        ixz="9.27480046753304E-24"
+        iyy="6.38808008560915E-08"
+        iyz="3.84652514330873E-23"
+        izz="1.27617401455768E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+                    rgba="0 0 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tampa_joint1"
+    type="fixed">
+    <origin
+      xyz="0 -0.043 0.6"
+      rpy="-1.5708 2.0204E-15 -1.5708" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="tampa1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tampa2">
+    <inertial>
+      <origin
+        xyz="0.015 -0.015 -0.000491941727426291"
+        rpy="0 0 0" />
+      <mass
+        value="0.000874663053495619" />
+      <inertia
+        ixx="6.38808008560923E-08"
+        ixy="-2.52580935900029E-24"
+        ixz="-3.82450269523941E-24"
+        iyy="6.38808008560915E-08"
+        iyz="-6.23648863168872E-23"
+        izz="1.27617401455767E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+                    rgba="0 0 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tampa_joint2"
+    type="fixed">
+    <origin
+      xyz="0 -0.073 0.6"
+      rpy="-1.5708 -6.123E-17 -1.5708" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="tampa2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tampa3">
+    <inertial>
+      <origin
+        xyz="0.015 0.0150000000000003 0.000491941727426226"
+        rpy="0 0 0" />
+      <mass
+        value="0.000874663053495497" />
+      <inertia
+        ixx="6.38808008560803E-08"
+        ixy="-2.34250421564535E-22"
+        ixz="-5.6721059847382E-24"
+        iyy="6.38808008560819E-08"
+        iyz="-5.91525121084966E-23"
+        izz="1.27617401455745E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+                    rgba="0 0 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tampa_joint3"
+    type="fixed">
+    <origin
+      xyz="0.32 -0.103 0.6"
+      rpy="1.5708 6.123E-17 1.5708" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="tampa3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tampa4">
+    <inertial>
+      <origin
+        xyz="0.015 0.0149999999999997 0.000491941727426282"
+        rpy="0 0 0" />
+      <mass
+        value="0.000874663053495488" />
+      <inertia
+        ixx="6.38808008560794E-08"
+        ixy="-7.31233136980388E-23"
+        ixz="5.02909026110651E-23"
+        iyy="6.38808008560811E-08"
+        iyz="-4.10567487783576E-23"
+        izz="1.27617401455743E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tampa4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tampa_joint4"
+    type="fixed">
+    <origin
+      xyz="0.32 -0.0729999999999996 0.6"
+      rpy="1.5707963267949 6.12303176911189E-17 1.5707963267949" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="tampa4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+	<gazebo reference="tampa1">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
+	<gazebo reference="tampa2">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
+	<gazebo reference="tampa3">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
+	<gazebo reference="tampa4">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
+<link
+    name="tv">
+    <inertial>
+      <origin
+        xyz="-1.14188936084503E-11 0.00631758902771762 0.0456902661812858"
+        rpy="0 0 0" />
+      <mass
+        value="1.04139790550844" />
+      <inertia
+        ixx="0.00221521914456974"
+        ixy="-4.16439279484658E-11"
+        ixz="3.63002570493575E-13"
+        iyy="0.00492777814840569"
+        iyz="-3.11823169868443E-05"
+        izz="0.00695266375583539" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tv.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/tv.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suporte2tv"
+    type="fixed">
+    <origin
+      xyz="0.159977341921746 -0.1157202428626 0.36"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="tv" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="arm_control_box">
+    <inertial>
+      <origin
+        xyz="0.0874604605423992 0.0306742048420322 0.0677387951607025"
+        rpy="0 0 0" />
+      <mass
+        value="1.88580869219064" />
+      <inertia
+        ixx="0.00396050112760631"
+        ixy="3.40564468788146E-06"
+        ixz="-2.6138309892175E-06"
+        iyy="0.00771581325906805"
+        iyz="-0.000451232161302695"
+        izz="0.00650786557377839" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/arm_control_box.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://porthos_description/meshes/arm_control_box.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suporte2controlbox"
+    type="fixed">
+    <origin
+      xyz="0.0728041142425171 -0.0429999999999999 0.175"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="suporte_base" />
+    <child
+      link="arm_control_box" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+</robot>

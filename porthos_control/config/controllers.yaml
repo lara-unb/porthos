@@ -1,0 +1,55 @@
+ # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+ 
+  # Position Controllers ---------------------------------------   
+ 
+  arm_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+     - shoulder_base
+     - shoulder_pitch
+     - shoulder_yaw
+     - elbow_pitch
+     - wrist_roll
+     - wrist_yaw
+     - wrist_pitch
+
+    constraints:
+      goal_time: 10.0
+      shoulder_base:
+        goal: 0.1
+      shoulder_pitch:
+        goal: 0.1
+      shoulder_yaw:
+        goal: 0.1
+      elbow_pitch:
+        goal: 0.1
+      wrist_roll:
+        goal: 0.1
+      wrist_yaw:
+        goal: 0.1
+      wrist_pitch:
+        goal: 0.1
+
+ 
+    gains: 
+      shoulder_base: {p: 1.0, i: 0.6, d: 0.3}
+      shoulder_pitch: {p: 4.0, i: 2.5, d: 1.8, i_clamp: 10}
+      shoulder_yaw: {p: 4.0, i: 3.0, d: 0.05, i_clamp: 10}
+      elbow_pitch: {p: 3.0, i: 2.0, d: 0.5, i_clamp: 10}
+      wrist_roll: {p: 4.0, i: 2.0, d: 0.0, i_clamp: 10}
+      wrist_yaw: {p: 4.0, i: 1.0, d: 0.0, i_clamp: 10}
+      wrist_pitch: {p: 3.0, i: 1.0, d: 0.0, i_clamp: 10}
+
+  claw_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+       - claw_left
+       - claw_right
+    constraints:
+      goal_time:10.0
+    gains: 
+      claw_left: {p: 4.0, i: 3.0, d: 2.0, i_clamp: 1}
+      claw_right: {p: 4.0, i: 3.0, d: 2.0, i_clamp: 1}

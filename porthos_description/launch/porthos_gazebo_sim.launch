@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="false"/>
+  </include>  
+
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find porthos_description)/robots/porthos_description.xacro" />
+
+  <node name="spawn_porthos" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model porthos" respawn="false" output="screen" /> 
+  
+  <rosparam file="$(find porthos_control)/config/controllers.yaml" command="load"/>
+
+  <!-- <node name="spawn_mesa" pkg="gazebo_ros" type="spawn_model" args="-file $(find porthos_gazebo)/objects/mesa.urdf -urdf -x 0.70 -y 0 -z 0.01 -Y -1.57 -model mesa" respawn="false" output="screen" /> -->
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" args="claw_controller arm_controller joint_state_controller" respawn="false" output="screen"/>
+
+  <node name="wheel_publisher" pkg="porthos_gazebo" type="wheel_publisher" /> <!--Add new node for wheels -->
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" /> 
+  
+</launch>

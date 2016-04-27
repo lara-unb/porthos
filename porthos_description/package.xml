@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+    <name>porthos_description</name>
+    <version>1.0.0</version>
+    <description>This package contains Porthos (Pioneer 3AT) robot description files</description>
+
+    <maintainer email="waldezjr14@gmail.com">Waldez Junior</maintainer>
+    <maintainer email="gabriel.araujo.5000@gmail.com">Gabriel Araujo</maintainer>
+
+    <license>BSD</license>
+    
+    <author email="waldezjr14@gmail.com">Waldez Junior</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <run_depend>porthos_control</run_depend>
+    <run_depend>gazebo_ros</run_depend> 
+
+    <export>
+    </export>
+</package>

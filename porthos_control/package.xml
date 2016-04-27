@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+    <name>porthos_control</name>
+    <version>1.0.0</version>
+    <description>Contains the controllers that run in realtime on Cyton and Porthos</description>
+
+    <maintainer email="waldezjr14@gmail.com">Waldez Junior</maintainer>
+    <maintainer email="gabriel.araujo.5000@gmail.com">Gabriel Araujo</maintainer>
+
+    <license>BSD</license>
+    
+    <author email="waldezjr14@gmail.com">Waldez Junior</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>actionlib</build_depend>
+    <build_depend>cmake_modules</build_depend>
+    <build_depend>control_msgs</build_depend>
+    <build_depend>controller_interface</build_depend>
+    <build_depend>hardware_interface</build_depend>
+    <build_depend>realtime_tools</build_depend>
+    <build_depend>sensor_msgs</build_depend>
+    <build_depend>geometry_msgs</build_depend>
+    <run_depend>actionlib</run_depend>
+    <run_depend>cmake_modules</run_depend>
+    <run_depend>control_msgs</run_depend>
+    <run_depend>controller_interface</run_depend>
+    <run_depend>hardware_interface</run_depend>
+    <run_depend>realtime_tools</run_depend>
+    <run_depend>geometry_msgs</run_depend>
+
+    <run_depend>controller_manager</run_depend>
+
+    <export>
+    </export>
+</package>
