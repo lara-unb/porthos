@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-    <name>porthos_control</name>
+    <name>porthos_cyton_control</name>
     <version>1.0.0</version>
     <description>Contains the controllers that run in realtime on Cyton and Porthos</description>
 
