@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+<group ns="porthos">
+    <param name="tf_prefix" value="porthos"/>
+    <param name="robot_description" command="$(find xacro)/xacro.py --inorder $(find porthos_description)/robots/porthos_description.xacro" />
+
+      <!-- send fake joint values -->
+      <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+         <param name="use_gui" value="false"/>
+         <param name="tf_prefix" value="porthos"/>
+      </node>
+
+    <!-- Combine joint values -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+        <param name="tf_prefix" value="porthos"/>
+    </node>
+    <!-- Show in Rviz   -->
+    <!-- #<node name="rviz" pkg="rviz" type="rviz" args="-d $(find porthos_description)/launch/porthos_display.rviz"/>    -->
+    <node name="p2os_driver" pkg="p2os_driver" type="p2os_driver">
+        <param name="port" value="/dev/ttyS0" />
+        <param name="use_sonar" value="false" />
+        <param name="pulse" value="1.0" />
+        <param name="odom_frame_id" value="porthos/odom"/>
+        <param name="base_link_frame_id" value="porthos/base_link"/>
+    </node>
+</group>
+</launch>

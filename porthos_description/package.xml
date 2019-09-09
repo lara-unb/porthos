@@ -12,7 +12,11 @@
     <author email="waldezjr14@gmail.com">Waldez Junior</author>
 
     <buildtool_depend>catkin</buildtool_depend>
-
+    <build_depend>roscpp</build_depend>
+    <build_depend>gazebo_ros</build_depend> 
+    <build_depend>sensor_msgs</build_depend>
+    <run_depend>sensor_msgs</run_depend>
+    <run_depend>roscpp</run_depend>
     <run_depend>porthos_control</run_depend>
     <run_depend>gazebo_ros</run_depend> 
 

@@ -2,11 +2,11 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="porthos_description">
 
-<xacro:include filename="$(find p2os_urdf)/defs/pioneer3at_body.xacro"/>
-<xacro:include filename="$(find cyton_description)/robots/cyton_gazebo_description.urdf"/>
+<xacro:include filename="$(find porthos_description)/robots/pioneer3at_body.xacro"/>
+<!-- <xacro:include filename="$(find cyton_description)/robots/cyton_gazebo_description.urdf"/> -->
 
-<xacro:include filename="$(find porthos_description)/robots/suporte_porthos_description.URDF"/>
-<xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_camera.urdf.xacro" />
+<xacro:include filename="$(find porthos_description)/robots/suporte_porthos_description.urdf"/>
+<!-- <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_camera.urdf.xacro" /> -->
 <xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
 <xacro:p3at_front suffix="left" reflect="1"/>
 <xacro:p3at_front suffix="right" reflect="-1"/>
@@ -14,11 +14,11 @@
 <xacro:p3at_back suffix="right" reflect="-1"/>
 
 
-<joint name="pioneer2cyton" type="fixed">
+<!-- <joint name="pioneer2cyton" type="fixed">
 	<origin xyz="0.08 0.071 0.004" rpy="0 0 0"/>
 		<parent link="top_plate"/>
 		<child link="link0"/>
-</joint>
+</joint> -->
 
 <joint name="pioneer2suporte" type="fixed">
 	<origin xyz="0.073 0.160 0.004" rpy="0 0 -1.57"/>

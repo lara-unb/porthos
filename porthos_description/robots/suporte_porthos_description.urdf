@@ -1,5 +1,5 @@
 <robot
-  name="suporte_porthos_description">
+  name="suporte_athos_description">
   <link
     name="suporte_base">
     <inertial>
@@ -7,7 +7,7 @@
         xyz="0.16 -0.0717771259809899 0.293842379381435"
         rpy="0 0 0" />
       <mass
-        value="5" />
+        value="0.5" />
       <inertia
         ixx="0.0517372413967915"
         ixy="2.32967941812823E-17"
@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_base.STL" />
+          filename="package://athos_description/meshes/suporte_base_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -36,10 +36,11 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_base.STL" />
+          filename="package://athos_description/meshes/suporte_base_mesh.dae" />
       </geometry>
     </collision>
   </link>
+  <!-- suprotes intermediarios da torre dos pioneers -->
   <link
     name="suporte_monitor">
     <inertial>
@@ -62,7 +63,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_monitor.STL" />
+          filename="package://athos_description/meshes/suporte_monitor_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -76,7 +77,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_monitor.STL" />
+          filename="package://athos_description/meshes/suporte_monitor_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -84,8 +85,8 @@
     name="monitor_joint"
     type="fixed">
     <origin
-      xyz="0.32 -0.103 0.335"
-      rpy="-1.5707963267949 -6.12303176911189E-17 -1.5707963267949" />
+      xyz="0.16 -0.113 0.335"
+      rpy="-1.5707963267949 3.14159265358979 -1.5707963267949" />
     <parent
       link="suporte_base" />
     <child
@@ -93,7 +94,7 @@
     <axis
       xyz="0 0 0" />
   </joint>
-  <link
+  <!-- <link
     name="suporte_depth">
     <inertial>
       <origin
@@ -115,7 +116,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_depth.STL" />
+          filename="package://athos_description/meshes/suporte_depth_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -129,7 +130,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_depth.STL" />
+          filename="package://athos_description/meshes/suporte_depth_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -145,12 +146,12 @@
       link="suporte_depth" />
     <axis
       xyz="0 0 0" />
-  </joint>
+  </joint> -->
   <link
     name="suporte_kinect">
     <inertial>
       <origin
-        xyz="0.16 0.0149999999999999 0.03"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <mass
         value="0.374047006313238" />
@@ -168,7 +169,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_kinect.STL" />
+          filename="package://athos_description/meshes/suporte_kinect_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -182,7 +183,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_kinect.STL" />
+          filename="package://athos_description/meshes/suporte_kinect_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -190,7 +191,7 @@
     name="kinect_joint"
     type="fixed">
     <origin
-      xyz="0 -0.0429999999999997 0.6"
+      xyz="0.161 -0.074 0.615"
       rpy="1.5707963267949 0 0" />
     <parent
       link="suporte_base" />
@@ -221,7 +222,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_armControl.STL" />
+          filename="package://athos_description/meshes/suporte_armControl_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -235,7 +236,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/suporte_armControl.STL" />
+          filename="package://athos_description/meshes/suporte_armControl_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -243,7 +244,7 @@
     name="armControl"
     type="fixed">
     <origin
-      xyz="0.03 -0.043 0.145"
+      xyz="0.161 -0.0743 0.1569"
       rpy="1.5708 0 0" />
     <parent
       link="suporte_base" />
@@ -274,7 +275,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa1.STL" />
+          filename="package://athos_description/meshes/tampa1_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -288,7 +289,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa1.STL" />
+          filename="package://athos_description/meshes/tampa1_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -327,7 +328,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa2.STL" />
+          filename="package://athos_description/meshes/tampa2_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -341,7 +342,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa2.STL" />
+          filename="package://athos_description/meshes/tampa2_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -380,7 +381,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa3.STL" />
+          filename="package://athos_description/meshes/tampa3_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -394,7 +395,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa3.STL" />
+          filename="package://athos_description/meshes/tampa3_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -433,7 +434,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa4.STL" />
+          filename="package://athos_description/meshes/tampa4_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -447,7 +448,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tampa4.STL" />
+          filename="package://athos_description/meshes/tampa4_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -464,19 +465,20 @@
     <axis
       xyz="0 0 0" />
   </joint>
-	<gazebo reference="tampa1">
-		<material value="Gazebo/Grey"/>
-	</gazebo>
-	<gazebo reference="tampa2">
-		<material value="Gazebo/Grey"/>
-	</gazebo>
-	<gazebo reference="tampa3">
-		<material value="Gazebo/Grey"/>
-	</gazebo>
-	<gazebo reference="tampa4">
-		<material value="Gazebo/Grey"/>
-	</gazebo>
-<link
+  <gazebo reference="tampa1">
+    <material value="Gazebo/Grey"/>
+  </gazebo>
+  <gazebo reference="tampa2">
+    <material value="Gazebo/Grey"/>
+  </gazebo>
+  <gazebo reference="tampa3">
+    <material value="Gazebo/Grey"/>
+  </gazebo>
+  <gazebo reference="tampa4">
+    <material value="Gazebo/Grey"/>
+  </gazebo>
+<!-- tv e caixa do controlador do braco -->
+<!-- <link
     name="tv">
     <inertial>
       <origin
@@ -498,7 +500,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tv.STL" />
+          filename="package://athos_description/meshes/tv_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -512,7 +514,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/tv.STL" />
+          filename="package://athos_description/meshes/tv_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -520,15 +522,15 @@
     name="suporte2tv"
     type="fixed">
     <origin
-      xyz="0.159977341921746 -0.1157202428626 0.36"
-      rpy="1.5707963267949 0 3.14159265358979" />
+      xyz="0.159977341921746 -0.095 0.355"
+      rpy="1.5707963267949 3.14159265358979 3.14159265358979" />
     <parent
       link="suporte_base" />
     <child
       link="tv" />
     <axis
       xyz="0 0 0" />
-  </joint>
+  </joint> -->
   <link
     name="arm_control_box">
     <inertial>
@@ -536,7 +538,7 @@
         xyz="0.0874604605423992 0.0306742048420322 0.0677387951607025"
         rpy="0 0 0" />
       <mass
-        value="1.88580869219064" />
+        value="0.45" />
       <inertia
         ixx="0.00396050112760631"
         ixy="3.40564468788146E-06"
@@ -551,7 +553,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/arm_control_box.STL" />
+          filename="package://athos_description/meshes/arm_control_box_mesh.dae" />
       </geometry>
       <material
         name="">
@@ -565,7 +567,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://porthos_description/meshes/arm_control_box.STL" />
+          filename="package://athos_description/meshes/arm_control_box_mesh.dae" />
       </geometry>
     </collision>
   </link>
@@ -573,7 +575,7 @@
     name="suporte2controlbox"
     type="fixed">
     <origin
-      xyz="0.0728041142425171 -0.0429999999999999 0.175"
+      xyz="0.16 -0.125 0.16"
       rpy="1.5707963267949 0 0" />
     <parent
       link="suporte_base" />
