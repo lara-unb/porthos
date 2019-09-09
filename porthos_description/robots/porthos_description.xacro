@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="porthos_description">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="porthos_description">
 
 <xacro:include filename="$(find porthos_description)/robots/pioneer3at_body.xacro"/>
 <!-- <xacro:include filename="$(find cyton_description)/robots/cyton_gazebo_description.urdf"/> -->
